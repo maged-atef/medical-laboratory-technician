@@ -1,0 +1,228 @@
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+li,
+hr,p {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 90%;
+    background-color:  #e8f9fd;
+    margin: 0 auto;
+    font-family: "winky-r";
+}
+
+.profession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+.contact {
+
+    /* background-color: green; */
+
+}
+
+.contact .inner-contact {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    /* background-color: red; */
+}
+
+nav {
+    /* background-color: yellow; */
+    padding: .5rem 0 ;
+}
+
+nav ul {
+    display: flex;
+
+    justify-content: space-around;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.work-history li { 
+    list-style: inside;
+}
+
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 9999;
+    font-size: 2rem;
+  
+}
+/* Utilities */
+.unlist {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "cairo-r";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+
+@font-face {
+    font-family: "cairo-sb";
+    src: url(../fonts/Cairo-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "winky-r";
+    src: url(../fonts/WinkyRough-Regular.ttf);
+}
+
+@font-face {
+    font-family: "winky-sb";
+    src: url(../fonts/WinkyRough-SemiBold.ttf);
+}
+
+.section-title {
+    margin: 1rem 0;
+   
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: blue;
+    font-family: winky-sb;
+}
+.item{
+    margin: 1rem 0 ;
+    padding: 0.5rem;
+ 
+    
+}
+.item:nth-child(odd){
+    background-color: #c2dde6;
+    border-radius: 0.5rem ;
+}
+.item:nth-child(even){
+    background-color:  #bccbde;
+    border-radius: 0.5rem ;
+}
+.facility{
+    font-weight: bolder;
+    color: rgb(16, 16, 17);
+    font-size: 1.3rem;
+}
+.duties { 
+    color: red;
+}
+
+.inner-education >div{ 
+ padding: 0.5rem  ;
+}
+.certificate{
+    margin: 1rem 0 ;
+   
+}
+
+.certificate:nth-child(odd){
+    background-color: #ffdc6a;
+    border-radius: 0.5rem;
+}
+.certificate:nth-child(even){
+    background-color:#94f0f1;
+    border-radius: 0.5rem;
+}
+.data-analysis{
+    background-color: #CAE4DB;
+}
+.programming{
+    background-color: #4ABDAC;
+}
+/* media queries */
+@media screen and (min-width:1000px) {
+    .item, .certificate , .data-analysis, .programming , .competence, .skills, header, .education ,.hobbies, .work-history{
+        max-width: 80%;
+        margin: 1rem auto;
+    }
+    
+}
+/* button */
+#button {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 60px;
+  background-color: #b80404;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 20px auto;
+  transition: background-color 0.3s ease;
+}
+#language-toggle{
+    display: none;
+}
+#ar {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  transition: 0.4s ease left, 0.4s ease background-color;
+  background-image: url(../imgs/arabic.avif);
+  background-size: cover;
+  background-position: center;;
+}
+
+#language-text {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: color 0.4s ease, left 0.4s ease;;
+}
+
+#language-toggle:checked + #button {
+  background-color: #0d1366;
+}
+
+#language-toggle:checked + #button #ar {
+  left: 95px;
+  background-color: #ffffff;
+  background-image: url(https://m.media-amazon.com/images/I/61dHFpZmRSL._AC_UF1000,1000_QL80_.jpg);
+}
+
+#language-toggle:checked + #button #language-text {
+  color: #ffffff;
+  left: 20px;
+  transition: left 0.4s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE:wght@100..800&display=swap');
+
+
